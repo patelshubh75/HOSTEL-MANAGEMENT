@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Complaints Management | K.D Hostel Admin</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-dark bg-primary">
+
+<div class="container-fluid">
+
+<a class="navbar-brand fw-bold">
+
+<i class="fa-solid fa-building"></i>
+
+K.D Hostel Admin Panel
+
+</a>
+
+
+<a href="../index.html" class="btn btn-warning">
+
+Logout
+
+</a>
+
+</div>
+
+</nav>
+
+
+
+
+
+
+<div class="container-fluid">
+
+<div class="row">
+
+
+
+<!-- Sidebar -->
+
+
+<div class="col-md-3 col-lg-2 bg-dark min-vh-100 p-3">
+
+
+<h5 class="text-white text-center">
+
+Admin Menu
+
+</h5>
+
+
+<hr class="text-white">
+
+
+<a href="dashboard.html" class="btn btn-dark text-white w-100 mb-2">
+
+<i class="fa fa-dashboard"></i>
+Dashboard
+
+</a>
+
+
+<a href="students.html" class="btn btn-dark text-white w-100 mb-2">
+
+<i class="fa fa-users"></i>
+Students
+
+</a>
+
+
+<a href="rooms.html" class="btn btn-dark text-white w-100 mb-2">
+
+<i class="fa fa-bed"></i>
+Rooms
+
+</a>
+
+
+<a href="hostel.html" class="btn btn-dark text-white w-100 mb-2">
+
+<i class="fa fa-building"></i>
+Hostel
+
+</a>
+
+
+<a href="fees.html" class="btn btn-dark text-white w-100 mb-2">
+
+<i class="fa fa-money-bill"></i>
+Fees
+
+</a>
+
+
+<a href="complaints.html" class="btn btn-primary w-100 mb-2">
+
+<i class="fa fa-comment"></i>
+Complaints
+
+</a>
+
+
+<a href="notices.html" class="btn btn-dark text-white w-100 mb-2">
+
+<i class="fa fa-bell"></i>
+Notices
+
+</a>
+
+
+<a href="reports.html" class="btn btn-dark text-white w-100 mb-2">
+
+<i class="fa fa-chart-bar"></i>
+Reports
+
+</a>
+
+
+<a href="profile.html" class="btn btn-dark text-white w-100 mb-2">
+
+<i class="fa fa-user"></i>
+Profile
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Main Content -->
+
+
+<div class="col-md-9 col-lg-10 p-4">
+
+
+
+<div class="d-flex justify-content-between">
+
+
+<h2 class="text-primary fw-bold">
+
+Complaint Management
+
+</h2>
+
+
+<button class="btn btn-success">
+
+<i class="fa fa-plus"></i>
+
+Add Complaint
+
+</button>
+
+
+</div>
+
+
+<hr>
+
+
+
+
+
+
+<!-- Complaint Cards -->
+
+
+<div class="row mb-4">
+
+
+<div class="col-md-4">
+
+
+<div class="card shadow text-center p-3">
+
+
+<h3 class="text-primary">
+
+50
+
+</h3>
+
+
+<p>Total Complaints</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="col-md-4">
+
+
+<div class="card shadow text-center p-3">
+
+
+<h3 class="text-danger">
+
+15
+
+</h3>
+
+
+<p>Pending Complaints</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="col-md-4">
+
+
+<div class="card shadow text-center p-3">
+
+
+<h3 class="text-success">
+
+35
+
+</h3>
+
+
+<p>Resolved Complaints</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Complaint Table -->
+
+
+<div class="card shadow">
+
+
+<div class="card-body">
+
+
+<h5 class="text-primary">
+
+Student Complaints List
+
+</h5>
+
+
+
+
+<table class="table table-bordered table-hover">
+
+
+<thead class="table-primary">
+
+
+<tr>
+
+
+<th>
+ID
+</th>
+
+
+<th>
+Student Name
+</th>
+
+
+<th>
+Room No
+</th>
+
+
+<th>
+Category
+</th>
+
+
+<th>
+Complaint
+</th>
+
+
+<th>
+Date
+</th>
+
+
+<th>
+Status
+</th>
+
+
+<th>
+Action
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+<tbody>
+
+
+
+<tr>
+
+
+<td>
+1
+</td>
+
+
+<td>
+Shubh Patel
+</td>
+
+
+<td>
+101
+</td>
+
+
+<td>
+Room Issue
+</td>
+
+
+<td>
+Fan not working
+</td>
+
+
+<td>
+22-07-2026
+</td>
+
+
+<td>
+
+<span class="badge bg-danger">
+
+Pending
+
+</span>
+
+
+</td>
+
+
+<td>
+
+
+<button class="btn btn-success btn-sm">
+
+<i class="fa fa-check"></i>
+
+Resolve
+
+</button>
+
+
+
+<button class="btn btn-warning btn-sm">
+
+<i class="fa fa-reply"></i>
+
+Reply
+
+</button>
+
+
+
+<button class="btn btn-danger btn-sm">
+
+<i class="fa fa-trash"></i>
+
+</button>
+
+
+</td>
+
+
+</tr>
+
+
+
+
+
+
+<tr>
+
+
+<td>
+2
+</td>
+
+
+<td>
+Student Name
+</td>
+
+
+<td>
+102
+</td>
+
+
+<td>
+Mess Issue
+</td>
+
+
+<td>
+Food Quality Problem
+</td>
+
+
+<td>
+21-07-2026
+</td>
+
+
+<td>
+
+<span class="badge bg-success">
+
+Resolved
+
+</span>
+
+
+</td>
+
+
+<td>
+
+
+<button class="btn btn-info btn-sm">
+
+<i class="fa fa-eye"></i>
+
+View
+
+</button>
+
+
+
+<button class="btn btn-danger btn-sm">
+
+<i class="fa fa-trash"></i>
+
+</button>
+
+
+</td>
+
+
+</tr>
+
+
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- Reply Box -->
+
+
+<div class="card shadow mt-4">
+
+
+<div class="card-body">
+
+
+<h5 class="text-primary">
+
+Admin Reply
+
+</h5>
+
+
+
+<textarea class="form-control mb-3"
+rows="4"
+placeholder="Write reply to student complaint"></textarea>
+
+
+
+<button class="btn btn-primary">
+
+<i class="fa fa-paper-plane"></i>
+
+Send Reply
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
