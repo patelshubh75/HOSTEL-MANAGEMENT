@@ -84,11 +84,11 @@ CREATE TABLE rooms (
 
     id INT AUTO_INCREMENT PRIMARY KEY,
 
-    room_no VARCHAR(20),
+    room_no int(20),
 
     block_name VARCHAR(50),
 
-    floor VARCHAR(20),
+    floor VARCHAR(20), 
 
     capacity INT,
 
@@ -229,6 +229,121 @@ VALUES
 'Fee Notice',
 'Pay hostel fees before last date',
 '2026-07-22'
+);
+
+
+-- ================= ROOM ALLOCATION HISTORY TABLE =================
+
+CREATE TABLE room_allocation_history (
+
+    id INT AUTO_INCREMENT PRIMARY KEY,
+
+    student_id INT,
+
+    room_no VARCHAR(20),
+
+    allocation_date DATE,
+
+    deallocation_date DATE,
+
+    status VARCHAR(20),
+
+    FOREIGN KEY (student_id) REFERENCES students(id)
+
+);
+
+
+-- ================= STAFF TABLE =================
+
+CREATE TABLE staff (
+
+    id INT AUTO_INCREMENT PRIMARY KEY,
+
+    name VARCHAR(100),
+
+    designation VARCHAR(50),
+
+    mobile VARCHAR(15),
+
+    email VARCHAR(100),
+
+    address TEXT,
+
+    joining_date DATE,
+
+    salary DECIMAL(10,2),
+
+    status VARCHAR(20)
+
+);
+
+
+INSERT INTO staff
+
+(name,designation,mobile,email,address,joining_date,salary,status)
+
+VALUES
+
+(
+'Rajesh Kumar',
+'Warden',
+'9876543211',
+'warden@kdhostel.com',
+'Staff Quarter, KDH',
+'2026-01-15',
+'25000.00',
+'Active'
+);
+
+
+-- ================= VISITOR MANAGEMENT TABLE =================
+
+CREATE TABLE visitors (
+
+    id INT AUTO_INCREMENT PRIMARY KEY,
+
+    student_id INT,
+
+    visitor_name VARCHAR(100),
+
+    visitor_mobile VARCHAR(15),
+
+    relation VARCHAR(50),
+
+    purpose TEXT,
+
+    visit_date DATE,
+
+    in_time TIME,
+
+    out_time TIME,
+
+    status VARCHAR(20),
+
+    FOREIGN KEY (student_id) REFERENCES students(id)
+
+);
+
+
+-- ================= ATTENDANCE TABLE =================
+
+CREATE TABLE attendance (
+
+    id INT AUTO_INCREMENT PRIMARY KEY,
+
+    student_id INT,
+
+    date DATE,
+
+    status VARCHAR(20),
+
+    check_in TIME,
+
+    check_out TIME,
+
+    remarks TEXT,
+
+    FOREIGN KEY (student_id) REFERENCES students(id)
 );
 
 

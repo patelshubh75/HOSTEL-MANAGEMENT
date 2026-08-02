@@ -28,7 +28,7 @@ let check = confirm("Do you want to logout?");
 
 if(check){
 
-window.location.href="../index.html";
+window.location.href="../index.php";
 
 }
 
